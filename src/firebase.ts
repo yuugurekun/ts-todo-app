@@ -18,3 +18,5 @@ const firebaseApp = firebase.initializeApp({
 // Reactのコンポーネントからデーターベースと認証モジュールを利用するためにエクスポート
 export const db = firebaseApp.firestore();
 export const auth = firebaseApp.auth();
+
+
