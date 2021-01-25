@@ -1,25 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import logo from "./logo.svg";
 import "./App.css";
-import { db } from "./firebase";
 
-const App: React.FC = () => {
-  const [tasks, setTasks] = useState([{ id: "", title: "" }]);
-  useEffect(() => {
-    const unSub = db.collection("tasks").onSnapshot((snapshot) => {
-      setTasks(
-        snapshot.docs.map((doc) => ({ id: doc.id, title: doc.data().title }))
-      );
-    });
-    return () => unSub();
-  }, []);
-
+function App() {
   return (
     <div className="App">
-      {tasks.map((task) => (
-        <h3>{task.title}</h3>
-      ))}
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.tsx</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
-};
+}
 
 export default App;

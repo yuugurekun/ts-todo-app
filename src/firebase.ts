@@ -6,10 +6,10 @@ import "firebase/auth";         //認証機能を使うのに必要なモジュ�
 // アプリケーションをイニシャライズアップする
 // 環境変数envを呼んできて各パラメーターに設定
 const firebaseApp = firebase.initializeApp({
-  apikey: process.env.REACT_APP_FIREBASE_APIKEY,
+  apiKey: process.env.REACT_APP_FIREBASE_APIKEY,
   authDomain: process.env.REACT_APP_FIREBASE_DOMAIN,
   databaseURL: process.env.REACT_APP_FIREBASE_DATABASE,
-  projectid: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
   storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
   messagingSenderId: process.env.REACT_APP_FIREBASE_SENDER_ID,
   appId: process.env.REACT_APP_FIREBASE_APP_ID,
