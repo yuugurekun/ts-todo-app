@@ -1,4 +1,4 @@
-import * as firebase from "firebase/app";
+import firebase from "firebase/app";
 import "firebase/app";
 import "firebase/firestore";    //データーベースを使うのに必要なモジュール
 import "firebase/auth";         //認証機能を使うのに必要なモジュール
@@ -12,7 +12,7 @@ const firebaseApp = firebase.initializeApp({
   projectid: process.env.REACT_APP_FIREBASE_PROJECT_ID,
   storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
   messagingSenderId: process.env.REACT_APP_FIREBASE_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
 });
 
 // Reactのコンポーネントからデーターベースと認証モジュールを利用するためにエクスポート
