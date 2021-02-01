@@ -16,7 +16,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       {tasks.map((task) => (
-        <h3>{task.title}</h3>
+        <h3 key={task.id}>{task.title}</h3>
       ))}
     </div>
   );
